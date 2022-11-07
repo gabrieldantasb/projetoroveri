@@ -1,0 +1,55 @@
+.container-cronograma {
+    border: dashed 3.75px #58AE26;
+    position: relative;
+    background-color: #85F579;
+    width: 400px;
+    padding: 10px;
+    /*               Sombra                */
+    /*Horizontal Vertical Blur Spread Color*/
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 30px 30px;
+}
+
+.titulo-cronograma {
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.button-x {
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    /*Alinhamento Vertical  */
+    justify-content: center;
+    /*Alinhamento Horizontal*/
+    color: #C63F3F;
+    background-color: #303030;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+}
+
+.new-atitividade {
+    /* border: dashed 1px black; */
+    height: auto;
+    width: 78%;
+    font-size: 25px;
+    color: white;
+    margin-inline: auto;
+    text-align: end;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+}
+
+.atividades {
+    /* border: dashed 1px black; */
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-top: 10px;
+}

@@ -1,0 +1,72 @@
+.atividade {
+    /* border: dashed 1px black; */
+    width: 90%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    justify-content: space-evenly;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+    /* Adiciona um Filtro em todas as Divs dentro de atividade */
+}
+
+.one {
+    /* border: dashed 1px black; */
+    display: flex;
+    justify-content: end;
+    height: inherit;
+    width: 58%;
+
+}
+
+.two {
+    /* border: dashed 1px black; */
+    height: inherit;
+    width: 28%;
+}
+
+.three {
+    /* border: dashed 1px black; */
+    height: inherit;
+    width: 8%;
+}
+
+.atividade-titulo {
+    /* border: dashed 1px black; */
+    width: max-content;
+    padding-inline: 15px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #FF668F 0%, #C540BF 100%);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.atividade-horario {
+    font-weight: 550;
+    padding-inline: 15px;
+    color: #A8A8A8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+    background: #FFFFFF;
+    border-radius: 18px;
+}
+
+.horarios {
+    font-size: 11px;
+}
+
+.atividade-delete {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    font-size: 22px;
+    cursor: pointer;
+    color: #C63F3F;
+}
