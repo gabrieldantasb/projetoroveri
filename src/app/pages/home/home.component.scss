@@ -1,7 +1,55 @@
-.d1{
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    margin-top: 123;
-    .d2{
-        color: bisque;
-    }
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8E8E8;
+}
+
+.new-cronograma {
+    font-size: 50px;
+    color: white;
+    margin-inline: 40px;
+    text-align: end;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+    cursor: pointer;
+    align-self: center;
+}
+
+.usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 40px;
+    font-size: 1em;
+    color: rgb(117, 117, 117);
+}
+
+.executar {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    left: 75px;
+    bottom: 100px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #32ACFC 0%, #3848D9 100%);
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+    cursor: pointer;
+}
+
+.icon-executar {
+    position: relative;
+    bottom: 20px;
+    color: white;
+    font-size: 100px;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
 }

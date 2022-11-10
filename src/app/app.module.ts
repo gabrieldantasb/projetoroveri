@@ -16,7 +16,7 @@ import { ImportarExportarComponent } from './components/importar-exportar/import
     LoginComponent,
     TabelaCronogramaComponent,
     AtividadeComponent,
-    ImportarExportarComponent
+    ImportarExportarComponent,
   ],
   imports: [
     BrowserModule,
