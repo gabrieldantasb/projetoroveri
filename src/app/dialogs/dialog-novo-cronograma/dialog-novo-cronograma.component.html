@@ -1,0 +1,13 @@
+
+<h1 mat-dialog-title></h1>
+<div mat-dialog-content>
+  <p>Digite o nome do cronograma?</p>
+  <mat-form-field appearance="fill">
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="titulo">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+  <button mat-button cdkFocusInitial (click)="criarCronograma()">Ok</button>
+</div>
