@@ -1,12 +1,17 @@
 <body>
   <div class="usuario">
-    <i style="font-size: 4em;" class="bi bi-people-fill"></i>
+    <i style="font-size: 4em" class="bi bi-people-fill"></i>
     <!-- <span>Você não esta <a routerLink="/login">conectado</a>.</span> -->
-    <span>Bem vindo, {{usuario.apelido}}.</span>
+    <span>Bem vindo, {{ usuario.apelido }}.</span>
   </div>
-  <ng-container *ngFor="let item of cronogramas">
-    <app-tabela-cronograma class="tabelas" [titulo]="item.titulo"></app-tabela-cronograma>
-  </ng-container>
+  <div class="group-crono">
+    <ng-container *ngFor="let item of cronogramas">
+      <app-tabela-cronograma
+        class="tabelas"
+        [titulo]="item.titulo"
+      ></app-tabela-cronograma>
+    </ng-container>
+  </div>
   <button class="new-cronograma" (click)="chamarDialogNovoCronograma()">
     <i class="bi bi-plus-circle-fill"></i>
   </button>

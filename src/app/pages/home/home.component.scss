@@ -1,53 +1,65 @@
-body{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #E8E8E8;
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e8e8;
 }
 
 .new-cronograma {
-    font-size: 50px;
-    color: white;
-    margin-inline: 40px;
-    text-align: end;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
-    cursor: pointer;
-    align-self: center;
+  font-size: 50px;
+  color: white;
+  margin-inline: 40px;
+  text-align: end;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+  cursor: pointer;
+  align-self: center;
 }
 
 .usuario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 30px;
-    right: 40px;
-    font-size: 1em;
-    color: rgb(117, 117, 117);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  font-size: 1em;
+  color: rgb(117, 117, 117);
 }
 
 .executar {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    left: 75px;
-    bottom: 100px;
-    border-radius: 20px;
-    background: linear-gradient(180deg, #32ACFC 0%, #3848D9 100%);
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
-    cursor: pointer;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  left: 75px;
+  bottom: 100px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #32acfc 0%, #3848d9 100%);
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+  cursor: pointer;
 }
 
 .icon-executar {
-    position: relative;
-    bottom: 6px;
-    color: white;
-    font-size: 100px;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
+  position: relative;
+  bottom: 6px;
+  color: white;
+  font-size: 100px;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.37));
 }
 
-.tabelas + .tabelas{
-  margin-left: 55px;
+.group-crono {
+  max-width: 88%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; // Quebra a linha
+  flex-direction: row;
+  row-gap: 120px;
+
+  .tabelas {
+    display: flex;
+    justify-content: center;
+    width: 33%;
+    // border: 1px solid black;
+  }
 }
