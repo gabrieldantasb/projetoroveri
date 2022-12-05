@@ -1,21 +1,27 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AtividadeService } from 'src/app/services/atividade.service';
 
 @Component({
   selector: 'app-atividade',
   templateUrl: './atividade.component.html',
-  styleUrls: ['./atividade.component.scss']
+  styleUrls: ['./atividade.component.scss'],
 })
 export class AtividadeComponent implements OnInit {
   @Input()
-  titulo: string = "Título da Atividade"
-  @Input()
-  horarioInicio:   string = "00:00"
-  @Input()
-  horarioFim:      string = "12:00"
+  atividade: any;
 
-  constructor() { }
+  @Output()
+  atualizar: EventEmitter<any> = new EventEmitter();
 
-  ngOnInit(): void {
+  constructor(private atividadeService: AtividadeService) {}
+
+  ngOnInit(): void {}
+
+  async deletarAtividade() {
+    const res = await this.atividadeService.deletarAtividade(this.atividade.id);
+
+    if (res) {
+      this.atualizar.emit()
+    }
   }
-
 }

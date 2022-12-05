@@ -1,0 +1,30 @@
+<div class="cont">
+  <h1>Nova atividade</h1>
+  <mat-form-field appearance="fill" class="cont">
+    <mat-label>Titulo</mat-label>
+    <input matInput placeholder="Ex. Pizza" [(ngModel)]="titulo" />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill" class="cont">
+    <mat-label>Selecione o horário de início</mat-label>
+    <mat-select [(ngModel)]="horarioInicial">
+      <mat-option>None</mat-option>
+      <ng-container *ngFor="let item of horarios">
+        <mat-option value="{{item}}">{{item}}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill" class="cont">
+    <mat-label>Selecione o horário de término</mat-label>
+    <mat-select [(ngModel)]="horarioFinal">
+      <mat-option>None</mat-option>
+      <ng-container *ngFor="let item of horarios">
+        <mat-option value="{{item}}">{{item}}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-button cdkFocusInitial (click)="criarAtividade()">Ok</button>
+
+</div>

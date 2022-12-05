@@ -8,7 +8,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -18,7 +18,9 @@ import { AtividadeComponent } from './components/atividade/atividade.component';
 import { ImportarExportarComponent } from './components/importar-exportar/importar-exportar.component';
 import { DialogNovoCronogramaComponent } from './dialogs/dialog-novo-cronograma/dialog-novo-cronograma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DialogNovaAtividadeComponent } from './dialogs/dialog-nova-atividade/dialog-nova-atividade.component';
 
+import { ToolsService } from './services/tools.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AtividadeComponent,
     ImportarExportarComponent,
     DialogNovoCronogramaComponent,
-
+    DialogNovaAtividadeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +41,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ToolsService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

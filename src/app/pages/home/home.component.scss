@@ -49,9 +49,13 @@ body {
 }
 
 .group-crono {
-  max-width: 88%;
+  height: 90vh;
+  overflow-y: auto;
+  padding-top: 80px;
+  width: 88%;
   position: relative;
   display: flex;
+  align-items: center;
   flex-wrap: wrap; // Quebra a linha
   flex-direction: row;
   row-gap: 120px;
@@ -60,6 +64,8 @@ body {
     display: flex;
     justify-content: center;
     width: 33%;
+    // min-height: 200px;
+    // overflow-y: scroll;
     // border: 1px solid black;
   }
 }

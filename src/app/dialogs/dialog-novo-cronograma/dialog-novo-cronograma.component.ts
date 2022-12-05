@@ -25,10 +25,8 @@ export class DialogNovoCronogramaComponent implements OnInit {
 
     try {
       const res = await this.cronogramaService.criarCronograma(this.titulo)
-      console.log(`tudo deu certo`, res)
       this.dialogRef.close(true)
     } catch (err) {
-      console.log(`algo deu errado`)
     }
 
   }

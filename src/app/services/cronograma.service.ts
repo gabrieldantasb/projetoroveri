@@ -4,25 +4,30 @@ import { environment } from 'src/environments/environment';
 import { AppGlobalService } from '../app-global.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CronogramaService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  async criarCronograma(titulo: string){
-    const url = `${environment.urlApi}/cronograma`
+  async criarCronograma(titulo: string) {
+    const url = `${environment.urlApi}/cronograma`;
     const body = {
       titulo,
-      usuarioId: AppGlobalService.usuario.id
-    }
+      usuarioId: AppGlobalService.usuario.id,
+    };
 
-    return this.http.post(url,body).toPromise()
+    return this.http.post(url, body).toPromise();
   }
 
-  async listarTodos(id: number){
-    const url = `${environment.urlApi}/cronograma/usuarioId=${id}`
+  async listarTodos(id: number) {
+    const url = `${environment.urlApi}/cronograma/usuarioId=${id}`;
 
-    return this.http.get(url).toPromise()
+    return this.http.get(url).toPromise();
+  }
+
+  async deletarCronograma(id: number) {
+    const url = `${environment.urlApi}/cronograma/${id}`;
+    
+    return this.http.delete(url).toPromise();
   }
 }

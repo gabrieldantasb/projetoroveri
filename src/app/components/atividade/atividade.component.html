@@ -1,18 +1,18 @@
 <div class="atividade">
     <div class="one">
-      <div class="atividade-titulo">{{titulo}}</div>
+      <div class="atividade-titulo">{{atividade.titulo}}</div>
     </div>
     <div class="two">
       <div class="atividade-horario">
-        <i class="bi bi-arrow-up"></i>
+        <!-- <i class="bi bi-arrow-up"></i> -->
         <div class="horarios">
-          <div>{{horarioFim}}</div>
-          <div>{{horarioInicio}}</div>
+          <div>{{atividade.horarioInicial}}</div>
+          <div>{{atividade.horarioFinal}}</div>
         </div>
       </div>
     </div>
     <div class="three">
-      <div class="atividade-delete">
+      <div class="atividade-delete" (click)="deletarAtividade()">
         <i class="bi bi-x-circle-fill"></i>
       </div>
     </div>

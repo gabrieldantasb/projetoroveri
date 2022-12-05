@@ -8,7 +8,9 @@
     <ng-container *ngFor="let item of cronogramas">
       <app-tabela-cronograma
         class="tabelas"
+        [id]="item.id"
         [titulo]="item.titulo"
+        (atualizar)="listarTodos()"
       ></app-tabela-cronograma>
     </ng-container>
   </div>
